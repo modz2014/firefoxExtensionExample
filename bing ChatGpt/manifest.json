@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Test",
+  "version": "0.1",
+  "description": "Testx",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+    "browser_specific_settings": {
+    "gecko": {
+      "id": "test"
+    }
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
